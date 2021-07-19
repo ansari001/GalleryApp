@@ -36,7 +36,7 @@ class SignInActivity : AppCompatActivity(), View.OnClickListener {
 
     private fun setUI() {
         ivBack.visibility = View.GONE
-        ivProfile.visibility=View.GONE
+        ivProfile.visibility = View.GONE
         tvToolbarTitle.text = getString(R.string.sign_in)
     }
 
