@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="4dp">
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/ivBack"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:background="@drawable/ic_back" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvToolbarTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="28dp"
+        android:fontFamily="@font/gothic_regular"
+        android:text="@string/profile"
+        android:textColor="@color/black"
+        android:textSize="22sp"
+        tools:ignore="RelativeOverlap" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/ivProfile"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignParentEnd="true"
+        android:background="@drawable/ic_profile" />
+
+</RelativeLayout>

@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">GalleryApp</string>
+    <string name="with_google">SignIn With Google</string>
+    <string name="name">Display Name</string>
+    <string name="email">Email</string>
+    <string name="logout">Logout</string>
+    <string name="gallery">Gallery</string>
+    <string name="internet_not_available">Internet is not available!</string>
+    <string name="okay">Okay</string>
+    <string name="profile">Profile</string>
+    <string name="sign_in">SignIn</string>
+</resources>
