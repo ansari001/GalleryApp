@@ -16,6 +16,7 @@
             android:id="@+id/ivCountryFlag"
             android:layout_width="match_parent"
             android:layout_height="150dp"
+            android:src="@drawable/ic_place_holder"
             android:layout_centerInParent="true"
             android:scaleType="centerCrop" />
 

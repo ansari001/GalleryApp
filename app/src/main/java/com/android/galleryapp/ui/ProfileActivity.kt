@@ -46,6 +46,7 @@ class ProfileActivity : AppCompatActivity(), View.OnClickListener {
         if (!TextUtils.isEmpty(photoURL)) {
             Picasso.get()
                 .load(photoURL)
+                .placeholder(R.drawable.ic_profile_placeholder)
                 .into(ivProfileImg)
         }
     }

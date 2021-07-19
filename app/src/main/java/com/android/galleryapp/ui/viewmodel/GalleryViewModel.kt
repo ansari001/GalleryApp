@@ -17,9 +17,9 @@ class GalleryViewModel @Inject constructor(private val galleryRepository: Galler
     ViewModel() {
 
     private val _post: MutableLiveData<List<GalleryUIModel>> = MutableLiveData()
-    private val post: LiveData<List<GalleryUIModel>> = _post
+    //private val post: LiveData<List<GalleryUIModel>> = _post
 
-    fun getPostLiveData(): LiveData<List<GalleryUIModel>> = post
+    fun getPostLiveData(): LiveData<List<GalleryUIModel>> = _post
 
     fun getImagesList(currentPage: Int, perPageLimit: Int) = viewModelScope.launch {
         val posts = galleryRepository.getGalleryList(currentPage, perPageLimit)

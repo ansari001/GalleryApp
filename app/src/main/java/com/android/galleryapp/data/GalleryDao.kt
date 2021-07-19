@@ -7,8 +7,6 @@ import androidx.room.Query
 
 @Dao
 interface GalleryDao {
-    /*@Query("SELECT * FROM user")
-    suspend fun getAll(): List<User>*/
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insertAll(users: List<GalleryRoomEntity>)
@@ -16,7 +14,6 @@ interface GalleryDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insertOnly(users: GalleryRoomEntity)
 
-    /*@Query("SELECT * FROM GalleryRoomEntity")*/
     @Query("SELECT * FROM GalleryRoomEntity LIMIT :limit OFFSET :offset")
     suspend fun getOfflineRecords(limit: Int, offset: Int): List<GalleryRoomEntity>
 
