@@ -40,6 +40,8 @@ class GalleryAdapter(
         if (country.imageByteArray == null) {
             Picasso.get()
                 .load(country.url)
+                .placeholder(R.drawable.ic_place_holder)
+                .error(R.drawable.ic_place_holder)
                 .into(object : com.squareup.picasso.Target {
                     override fun onBitmapLoaded(bitmap: Bitmap?, from: Picasso.LoadedFrom?) {
                         holder.ivCountryFlag.setImageBitmap(bitmap)
