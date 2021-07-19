@@ -94,9 +94,9 @@ class GalleryActivity : AppCompatActivity(), View.OnClickListener {
 
     private fun fetchData() {
         if (AppUtils.isNetworkAvailable(this)) {
-            postViewModel.getPost(currentPage, AppConstants.PER_PAGE_ITEM_LIMIT)
+            postViewModel.getImagesList(currentPage, AppConstants.PER_PAGE_ITEM_LIMIT)
         } else {
-            postViewModel.getPostFromRoomDB(currentPage, AppConstants.PER_PAGE_ITEM_LIMIT, dbHelper)
+            postViewModel.getImagesFromRoomDB(currentPage, AppConstants.PER_PAGE_ITEM_LIMIT, dbHelper)
         }
     }
 

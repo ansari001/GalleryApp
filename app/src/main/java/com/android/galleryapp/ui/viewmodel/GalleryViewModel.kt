@@ -21,7 +21,7 @@ class GalleryViewModel @Inject constructor(private val galleryRepository: Galler
 
     fun getPostLiveData(): LiveData<List<GalleryUIModel>> = post
 
-    fun getPost(currentPage: Int, perPageLimit: Int) = viewModelScope.launch {
+    fun getImagesList(currentPage: Int, perPageLimit: Int) = viewModelScope.launch {
         val posts = galleryRepository.getGalleryList(currentPage, perPageLimit)
         val uiDataList = mutableListOf<GalleryUIModel>()
         posts.forEach {
@@ -31,7 +31,7 @@ class GalleryViewModel @Inject constructor(private val galleryRepository: Galler
         _post.value = uiDataList
     }
 
-    fun getPostFromRoomDB(currentPage: Int, perPageLimit: Int, dbHelper: DatabaseHelperImpl) =
+    fun getImagesFromRoomDB(currentPage: Int, perPageLimit: Int, dbHelper: DatabaseHelperImpl) =
         viewModelScope.launch {
             val offSet = currentPage * perPageLimit
             val offlineRecordsList = dbHelper.getOfflineRecords(perPageLimit, offSet)
